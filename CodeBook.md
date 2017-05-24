@@ -53,3 +53,54 @@ Use gsub function for pattern replacement to clean up the data labels.
 # Section 5. Create a second, independent tidy data set with the average of each variable for each activity and each subject.
 
 Per the project instructions, we need to produce only a data set with the average of each veriable for each activity and subject
+
+
+  The following is paraphrased from the README file from the above url. This data provided data on a group of 30 volunteers between the ages of 19-48 years. Each subject performed six activities (walking, walking upstairs, walking downstairs, sitting, standing, laying) wearing a Samsung Galaxy SII smartphone on their waist. The experimenters measured the 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz and video-recorded the experiments to label the data manually. The resulting dataset was randomly split into two sets, where 70% of subjects were used to generate the training data and 30% the test data. 
+  
+  The run_analysis function first creates a directory, ./data, and downloads the zip file url into that file. It then unzips the dataset to the ./data directory. This creates a directory called "UCI HAR Dataset". 
+  
+  Next, all the relevant files from the "UCI HAR Dataset" are read by read.table into variables for manipulation within the function:
+  - features.txt - this file is read and stored into the variable "features"
+  - activity_labels.txt - this file is read and stored in the variable "activity_labels"
+  - subject_test.txt - 
+  - y_test.txt - 
+  - X_test.txt - 
+
+
+For each record it is provided:
+======================================
+
+- Triaxial acceleration from the accelerometer (total acceleration) and the estimated body acceleration.
+- Triaxial Angular velocity from the gyroscope. 
+- A 561-feature vector with time and frequency domain variables. 
+- Its activity label. 
+- An identifier of the subject who carried out the experiment.
+
+The dataset includes the following files:
+=========================================
+
+- 'README.txt'
+
+- 'features_info.txt': Shows information about the variables used on the feature vector.
+
+- 'features.txt': List of all features.
+
+- 'activity_labels.txt': Links the class labels with their activity name.
+
+- 'train/X_train.txt': Training set.
+
+- 'train/y_train.txt': Training labels.
+
+- 'test/X_test.txt': Test set.
+
+- 'test/y_test.txt': Test labels.
+
+The following files are available for the train and test data. Their descriptions are equivalent. 
+
+- 'train/subject_train.txt': Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30. 
+
+- 'train/Inertial Signals/total_acc_x_train.txt': The acceleration signal from the smartphone accelerometer X axis in standard gravity units 'g'. Every row shows a 128 element vector. The same description applies for the 'total_acc_x_train.txt' and 'total_acc_z_train.txt' files for the Y and Z axis. 
+
+- 'train/Inertial Signals/body_acc_x_train.txt': The body acceleration signal obtained by subtracting the gravity from the total acceleration. 
+
+- 'train/Inertial Signals/body_gyro_x_train.txt': The angular velocity vector measured by the gyroscope for each window sample. The units are radians/second. 
