@@ -14,7 +14,7 @@ This is the course project for the Getting and Cleaning Data Coursera course. Th
 6. Bind the rows of the training and test datasets
 7. Extract the columns that include the strings "subject", "activity_label", "mean", or "std" (for standard deviation) and store as a new data frame
 8. Rename the columns of activity_labels as "activity_label" and "activity_type"
-9. Merge the activity_labels data frame with the new data frame using "activity_label" as the connector
+9. Merge the activity_labels data frame with the new data frame using "activity_label" as the identifier
 10. Creates a tidy dataset that consists of the mean value of each variable for each subject and activity
 
 The end result is shown in the file TidySet2.txt.
