@@ -1,8 +1,9 @@
 # Getting and Cleaning Data Course Assignment
 =====================================================================
-  This course project for the Getting and Cleaning Data Coursera course is meant to demonstrate the ability to collect, work with, and clean a data set. 
+ 
+This course project for the Getting and Cleaning Data Coursera course is meant to demonstrate the ability to collect, work with, and clean a data set. 
   
-  This is the course project for the Getting and Cleaning Data Coursera course. The R script, run_analysis.R, does the following:
+This is the course project for the Getting and Cleaning Data Coursera course. The R script, run_analysis.R, does the following:
 
 1. Download the dataset if it does not already exist in the working directory
 2. Read and store the activity_labels and features text files as data frames
