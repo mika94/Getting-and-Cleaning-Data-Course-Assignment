@@ -1,8 +1,12 @@
 # Getting and Cleaning Data Course Assignment
-=====================================================================
- 
-This course project for the Getting and Cleaning Data Coursera course is meant to demonstrate the ability to collect, work with, and clean a data set. 
-  
+
+# Overview
+
+This course project for the Getting and Cleaning Data Coursera course is meant to demonstrate the ability to collect, work with, and clean a data set for subsequent analysis. Using a data set provided by the course, a zip file containing all data for this project was downloaded from the url [here](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip). A full description of the data used in this project can be found at 
+[The UCI Machine Learning Repository](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones).
+
+# Project Summary
+
 This is the course project for the Getting and Cleaning Data Coursera course. The R script, run_analysis.R, does the following:
 
 1. Download the dataset if it does not already exist in the working directory
@@ -15,13 +19,15 @@ This is the course project for the Getting and Cleaning Data Coursera course. Th
 7. Extract the columns that include the strings "subject", "activity_label", "mean", or "std" (for standard deviation) and store as a new data frame
 8. Rename the columns of activity_labels as "activity_label" and "activity_type"
 9. Merge the activity_labels data frame with the new data frame using "activity_label" as the identifier
-10. Creates a tidy dataset that consists of the mean value of each variable for each subject and activity
+10. Creates a tidy dataset that consists of the mean value of each variable for each subject and activity type
+11. Order the tidy dataset by subject and activity label
+12. Write a text file table of the data and call it TidySet2.txt
+13. Read TidySet2.txt, setting header = TRUE, and store in the variable TidySet2
+14. View TidySet2 using the View() function
+15. When the function is run, the dataset will be saved as a text file, TidySet2.txt, in the working directory and displayed in a new window of R
 
-The end result is shown in the file TidySet2.txt.
+*Additional information about the variables, data, and transformations can be found in the CodeBook.MD file.* 
   
-  Using a data set provided by the Coursera course "Getting and Cleaning Data", a zip file containing all data for this project was downloaded from the url
-<https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip>.
-
   The following is paraphrased from the README file from the above url. This data provided data on a group of 30 volunteers between the ages of 19-48 years. Each subject performed six activities (walking, walking upstairs, walking downstairs, sitting, standing, laying) wearing a Samsung Galaxy SII smartphone on their waist. The experimenters measured the 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz and video-recorded the experiments to label the data manually. The resulting dataset was randomly split into two sets, where 70% of subjects were used to generate the training data and 30% the test data. 
   
   The run_analysis function first creates a directory, ./data, and downloads the zip file url into that file. It then unzips the dataset to the ./data directory. This creates a directory called "UCI HAR Dataset". 
