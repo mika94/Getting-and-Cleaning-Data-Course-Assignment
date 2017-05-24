@@ -1,11 +1,11 @@
 # Getting and Cleaning Data Course Assignment
 
-# Overview
+## Overview
 
 This course project for the Getting and Cleaning Data Coursera course is meant to demonstrate the ability to collect, work with, and clean a data set for subsequent analysis. Using a data set provided by the course, a zip file containing all data for this project was downloaded from the url [here](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip). A full description of the data used in this project can be found at 
 [The UCI Machine Learning Repository](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones).
 
-# Project Summary
+## Project Summary
 
 This is the course project for the Getting and Cleaning Data Coursera course. The R script, run_analysis.R, does the following:
 
