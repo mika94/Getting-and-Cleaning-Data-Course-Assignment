@@ -48,6 +48,7 @@ Caroline Seiler
 
 ## Acknowledgments
 
+Thank you to the information provided in the post by [David Hood](https://thoughtfulbloke.wordpress.com/2015/09/09/getting-and-cleaning-the-assignment/) for helping guide me during the assignment.
 Thank you to everyone on Coursera and in the Getting and Cleaning Data course for the great learning experience and help on discussion board!
 
 *Additional information about the variables, data, and transformations can be found in the CodeBook.MD file.*
