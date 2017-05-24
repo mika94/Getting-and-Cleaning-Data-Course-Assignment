@@ -5,7 +5,7 @@ run_analysis <- function() {
         download.file(fileUrl,destfile="./data/Dataset.zip")
         # Unzip dataset to /data directory
         unzip(zipfile="./data/Dataset.zip", exdir = "./data")
-        # First, read the data within the directory and assign to variables
+        # Next, read the data within the directory and assign to variables
         # Read the feature text file and assign values to "features"
         features <- read.table("./data/UCI HAR Dataset/features.txt")
         # Read the activity_labels text file and
