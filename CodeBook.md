@@ -27,9 +27,9 @@ For each record in the dataset it is provided:
 1. The run_analysis function first creates a directory, ./data, and downloads the zip file url into that file. It then unzips the dataset to the ./data directory. This creates a directory called "UCI HAR Dataset". 
   
 2. Next, all the relevant files from the "UCI HAR Dataset" are read by read.table into variables for manipulation within the function:
-..- features.txt - this file is read and stored into the variable "features"
-..- activity_labels.txt - this file is read and stored in the variable "activity_labels"
-..- subject_test.txt - this file is read and stored in the variable "subject_test" and the column name is renamed from "V1" to "subject" using the rename function from dplyr
+⋅⋅* features.txt - this file is read and stored into the variable "features"
+⋅⋅* activity_labels.txt - this file is read and stored in the variable "activity_labels"
+⋅⋅* subject_test.txt - this file is read and stored in the variable "subject_test" and the column name is renamed from "V1" to "subject" using the rename function from dplyr
 ..- y_test.txt - this file is read and stored in the variable "y_test"
 ..- X_test.txt - this file is read and stored in the variable "x_test", calling col.names = features[[2]] to use the terms in the features dataset as the column names
 ..- subject_train.txt - this file is read and stored in the variable "subject_train" and the column name is renamed from "V1" to "subject" using the rename function from dplyr
