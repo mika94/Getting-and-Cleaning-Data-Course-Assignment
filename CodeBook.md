@@ -27,33 +27,33 @@ For each record in the dataset it is provided:
 1. The run_analysis function first creates a directory, ./data, and downloads the zip file url into that file. It then unzips the dataset to the ./data directory. This creates a directory called "UCI HAR Dataset". 
   
 2. Next, all the relevant files from the "UCI HAR Dataset" are read by read.table into variables for manipulation within the function:
-⋅⋅* features.txt - this file is read and stored into the variable "features"
-⋅⋅* activity_labels.txt - this file is read and stored in the variable "activity_labels"
-⋅⋅* subject_test.txt - this file is read and stored in the variable "subject_test" and the column name is renamed from "V1" to "subject" using the rename function from dplyr
-..- y_test.txt - this file is read and stored in the variable "y_test"
-..- X_test.txt - this file is read and stored in the variable "x_test", calling col.names = features[[2]] to use the terms in the features dataset as the column names
-..- subject_train.txt - this file is read and stored in the variable "subject_train" and the column name is renamed from "V1" to "subject" using the rename function from dplyr
-..- y_train.txt - this file is read and stored in the variable "y_train"
-..- X_train.txt - this file is read and stored in the variable "x_train", calling col.names = features[[2]] to use the terms in the features dataset as the column names
+  - features.txt - this file is read and stored into the variable "features"
+  - activity_labels.txt - this file is read and stored in the variable "activity_labels"
+  - subject_test.txt - this file is read and stored in the variable "subject_test" and the column name is renamed from "V1" to "subject" using the rename function from dplyr
+  - y_test.txt - this file is read and stored in the variable "y_test"
+  - X_test.txt - this file is read and stored in the variable "x_test", calling col.names = features[[2]] to use the terms in the features dataset as the column names
+  - subject_train.txt - this file is read and stored in the variable "subject_train" and the column name is renamed from "V1" to "subject" using the rename function from dplyr
+  - y_train.txt - this file is read and stored in the variable "y_train"
+  - X_train.txt - this file is read and stored in the variable "x_train", calling col.names = features[[2]] to use the terms in the features dataset as the column names
 
 3. Rename the columns in the activity_labels, subject_test, y_test, subject_train, and y_train datasets using the rename function from dplyr
-..- for the subject_test and subject_train datasets, rename the column from "V1" to "subject"
-..- for the y_test and y_train datasets, rename the column from "V1" to "activity_label"
-..- for the activity_labels dataset, rename the "V1" and "V2" columns as "activity_label" and "activity_type", respectively
+  - for the subject_test and subject_train datasets, rename the column from "V1" to "subject"
+  - for the y_test and y_train datasets, rename the column from "V1" to "activity_label"
+  - for the activity_labels dataset, rename the "V1" and "V2" columns as "activity_label" and "activity_type", respectively
 
 4. Merge the train and test sets to create one data set
-..- Column bind the subject_test, y_test, and x_test datasets and call this the "test" dataset
-..- Column bind the subject_train, y_train, and x_train datasets and call this the "train" dataset
-..- Row bind the "test" and "train" datasets to get the full dataset
+  - Column bind the subject_test, y_test, and x_test datasets and call this the "test" dataset
+  - Column bind the subject_train, y_train, and x_train datasets and call this the "train" dataset
+  - Row bind the "test" and "train" datasets to get the full dataset
 
 5. Extract the measurements on the mean and standard deviation for each measurement
-..- Use grepl to only include the strings: "subject", "activity_label", "mean", or "std" (std represents "standard deviation"), accounting for capitalizations by writing the words "mean" and "std" as [Mm][Ee][Aa][Nn] and [Ss][Tt][Dd], respectively.
+  - Use grepl to only include the strings: "subject", "activity_label", "mean", or "std" (std represents "standard deviation"), accounting for capitalizations by writing the words "mean" and "std" as [Mm][Ee][Aa][Nn] and [Ss][Tt][Dd], respectively.
 
 6. Use descriptive activity names to appropriately label the dataset
-..- Merge the subsetted data from the previous step with the activity_labels data, correlating the two datasets with the common factor 'activity_label'
+  - Merge the subsetted data from the previous step with the activity_labels data, correlating the two datasets with the common factor 'activity_label'
 
 7. Create a second, independent tidy data set with the average of each variable for each activity and each subject
-..- Now, use the aggregate function to get the mean of each variable for each activity and each subject.
+  - Now, use the aggregate function to get the mean of each variable for each activity and each subject.
 
 Please refer to [run_analysis.R](https://github.com/mika94/Getting-and-Cleaning-Data-Course-Assignment/blob/master/run_analysis.R) for further implementation details.
 
