@@ -58,7 +58,7 @@ For each record in the dataset it is provided:
 Please refer to [run_analysis.R](https://github.com/mika94/Getting-and-Cleaning-Data-Course-Assignment/blob/master/run_analysis.R) for further implementation details.
 
 ## Variables
-* These variables describe column names and their values in the final dataset *
+*These variables describe column names and their values in the final dataset*
 
 - subject: the numerical representation of a participant in the study (labelled by the numbers 1 to 30)
 - activity_label: the activity label (numbers 1 to 6) representing the type of activity the subject performed during measurement 
